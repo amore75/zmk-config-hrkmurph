@@ -12,14 +12,6 @@
 
 #define TIMEOUT 300
 
-&middle_left_encoder {
-    status = "okay";
-};
-
-&top_right_encoder {
-    status = "okay";
-};
-
 / {
     combos {
         compatible = "zmk,combos";
@@ -60,8 +52,6 @@
 
                             &bt BT_CLR   &rgb_ug RGB_TOG &rgb_ug RGB_EFF
             >;
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
-
         };
 
         fn_layer {
@@ -76,8 +66,6 @@
 
                             &trans           &trans           &trans
             >;
-            sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
-
         };
     };
 };
